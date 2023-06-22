@@ -1,0 +1,187 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(45deg, #ea4f4c 0%, #6d0019 100%); */
+    /* background-image: url('../../public/Images/login-background.jpg'); */
+  }
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  padding-bottom: 10px;
+  background: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.MainHome{
+  background-image: url('../../public/Images/login-background.jpg');
+  height:100vh;
+  display:flex;
+  justify-content:center;
+ align-items:center;
+   
+}
+
+.Home1{
+  float: right;
+}
+
+.Home2 {
+  background: #222;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.btn{
+  color: white;
+  /* border: none; */
+  background-color: white;
+}
+
+/* .Sigin{
+  width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.login_container{
+
+  /* padding: 1rem 2rem; */
+  /* border-radius: 6px; */
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #fff; 
+  /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+}
+.form{
+  background-color: #07101d74;
+  /* padding: 100px; */
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form input{
+  border: none;
+  width: 80%;
+  height: 25px;
+}
+.Home_01{
+  justify-content:center;
+  align-items:center;
+  background-image: url('../../public/Images/login-background.jpg');
+}
+
+.streamHome{
+
+}
+.videos_00{
+  min-height: calc(100vh - 190px);
+  overflow: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;  
+    width: 100%;
+    font-size: 10px;
+    flex-direction: row;
+    /* grid-row: 2; */
+}
+.popUp{
+  /* width: 350px;
+  height: 50vh;
+  background-color: #fff;
+  align-items: center;
+  justify-self: center;
+  padding-left: 200px;
+  top: 100px; */
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 150px;
+  height: 20vh;
+  padding: 5px;
+
+}
+.plan_main{
+  background-image: url("../../public/Images/login-background.jpg");
+  height: calc(100vh- 190px);
+
+}
+
+.Card{
+  width: 18rem;
+  background-color: #07101d74;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.Card_main{
+  min-height: calc(100vh - 150px);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;  
+    width: 100%;
+    font-size: 20px;
+    flex-direction: row;
+}
+
+.chose_plan{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.plan_inside{
+  width: 40%;
+  height: 30vh;
+  background-color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  
+}
+
+.plan_inside select{
+  width: 10%;
+  height: 5vh;
+  color: rgb(12, 12, 12);
+  background-color: rgba(34, 34, 34, 0.175);
+}
+
+.profile{
+  background: #222;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.searchItem{
+  background-color: rgba(0, 0, 0, 0.415);
+  color: #fff;
+}
+#nw{
+  color: green;
+}
