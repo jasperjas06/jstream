@@ -58,11 +58,12 @@
 
   /* padding: 1rem 2rem; */
   /* border-radius: 6px; */
+  background-color: #07101d74;
+  height: 300px;
   font-size: 16px;
   letter-spacing: 2px;
   color: #fff; 
   /* width: 100%; */
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +71,7 @@
     width: 320px;
 }
 .form{
-  background-color: #07101d74;
+  /* background-color: #07101d74; */
   /* padding: 100px; */
   display: flex;
     flex-direction: column;
@@ -184,4 +185,7 @@
 }
 #nw{
   color: green;
+}
+#cbtn{
+  margin-top: 1rem;
 }

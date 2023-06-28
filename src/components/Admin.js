@@ -8,28 +8,30 @@ function Admin() {
   const [file, setFile] = useState();
   const [description, setDescription] = useState();
 
-  const send =()=> {
+  const send = () => {
     const data = new FormData();
     data.append("title", title);
     data.append("file", file);
-    data.append("description",description)
+    data.append("description", description);
 
-    axios.post("http://localhost:2022/api-video/uploadVideo", {data})
-      .then(res => console.log(res),
-      alert("video uploaded"))
-      .catch(err => console.log(err));
+    axios
+      .post("https://j-stream-server.onrender.com/api-video/uploadVideo", {
+        data,
+      })
+      .then((res) => console.log(res), alert("video uploaded"))
+      .catch((err) => console.log(err));
   };
 
   return (
     <div className="App">
       <header className="App-header">
-        <form >
+        <form>
           <div className="flex">
             <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
-              onChange={e=>setTitle(e.target.value)}
+              onChange={(e) => setTitle(e.target.value)}
             />
           </div>
           <div className="flex">
@@ -38,7 +40,7 @@ function Admin() {
               type="file"
               id="file"
               // accept=".mp4"
-              onChange={e=>setFile(e.target.files[0])}
+              onChange={(e) => setFile(e.target.files[0])}
             />
           </div>
           <div className="flex">
@@ -46,7 +48,7 @@ function Admin() {
             <input
               type="text"
               id="description"
-              onChange={e=>setDescription(e.target.value)}
+              onChange={(e) => setDescription(e.target.value)}
             />
           </div>
         </form>
