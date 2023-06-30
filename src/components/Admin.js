@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./Admin.css";
 import axios from "axios";
+import { Toaster, toast } from "react-hot-toast";
 
 function Admin() {
   const [title, setTitle] = useState();
@@ -9,16 +10,17 @@ function Admin() {
   const [description, setDescription] = useState();
 
   const send = () => {
-    const data = new FormData();
-    data.append("title", title);
-    data.append("file", file);
-    data.append("description", description);
+    // const data = new FormData();
+    // data.append("title", title);
+    // data.append("file", file);
+    // data.append("description", description);
+    const data = {"title":title,"file":file,"description":description}
+    // console.log(data);
 
-    axios
-      .post("https://j-stream-server.onrender.com/api-video/uploadVideo", {
+    axios.post("https://j-stream-server.onrender.com/api-video/uploadVideo", {
         data,
       })
-      .then((res) => console.log(res), alert("video uploaded"))
+      .then((res) => console.log(res), toast.success("video uploaded"))
       .catch((err) => console.log(err));
   };
 
@@ -39,7 +41,7 @@ function Admin() {
             <input
               type="file"
               id="file"
-              // accept=".mp4"
+              accept="video/mp4,video/x-m4v,video/*"
               onChange={(e) => setFile(e.target.files[0])}
             />
           </div>
@@ -54,7 +56,11 @@ function Admin() {
         </form>
         <button onClick={send}>Send</button>
       </header>
-    </div>
+    <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
+  </div>
   );
 }
 

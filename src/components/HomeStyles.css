@@ -135,8 +135,8 @@
 }
 
 .Card_main{
-  min-height: calc(100vh - 150px);
-    margin-top: 20px;
+  min-height: 100vh;
+    /* margin-top: -102px; */
     display: flex;
     align-items: center;
     justify-content: center;

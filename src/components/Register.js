@@ -1,17 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./Navbar/Navbar";
-import { Formik, useFormik } from "formik";
-import { useNavigate, useLocation } from "react-router-dom";
+import {  useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import axios from "axios";
 import { CButton, CFormInput } from "@coreui/react";
+import { Toaster, toast } from "react-hot-toast";
 function Register() {
   const navigate = useNavigate();
-  // const [name,setName]=useState();
-  // const [phone_no,setPhone_no]=useState()
-  // const [password,setPassword]=useState();
-  // const [confirmpassword,setConfirmpassword]=useState()
-  // const [email, setEmail]=useState();
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
     email: Yup.string().required("Invalid Email").email("E-mail is invalid"),
@@ -44,13 +40,13 @@ function Register() {
             email: data.email,
           })
           .then((response) => {
-            console.log(response.data);
-            alert(response.data);
+            // console.log(response.data);
+            toast.success(response.data);
             // localStorage.setItem("Token", JSON.stringify(response.data));
             navigate("/login");
           });
       } catch (error) {
-        console.log(error.message);
+        toast.error(error.message);
       }
     },
   });
@@ -128,6 +124,10 @@ function Register() {
             </CButton>
           </form>
         </div>
+        <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
       </div>
     </>
   );

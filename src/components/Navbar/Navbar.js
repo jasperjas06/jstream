@@ -24,7 +24,8 @@ const Navbar = () => {
                             {/* <span className="lo"> */}
                                 {/* <img src="https://t4.ftcdn.net/jpg/01/83/14/31/240_F_183143188_qVOZj1mJklbv1idlH2LyHrV0BXCgnw7T.jpg" alt="img" style={{height:"50px"}} /> */}
                                 {/* </span>tream */}
-                                <i class="fa-regular fa-laptop"></i>
+                                {/* <i class="fa-regular fa-laptop"></i> */}
+                                <img src="https://cdn-icons-png.flaticon.com/128/7448/7448228.png" alt="logo" style={{width:40,height:40}} />
                                 <span className="lo">Stream</span>
                         </Link>
                     </span>

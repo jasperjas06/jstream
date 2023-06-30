@@ -4,8 +4,8 @@ import axios from "axios";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import Navbar from "./Navbar/Navbar";
-import { TextField } from "@mui/material";
 import { CFormInput, CButton } from "@coreui/react";
+import { toast } from "react-hot-toast";
 function SignIn() {
   const navigate = useNavigate();
 
@@ -37,16 +37,16 @@ function SignIn() {
             email: data.email,
           })
           .then((response) => {
-            console.log(response.data);
-            alert("Login Successfull");
+            // console.log(response.data);
+            toast.success("Login Successfull");
             // localStorage.setItem('Token',JSON.stringify(response.data))
             localStorage.setItem("Token", JSON.stringify(response.data));
-            setTimeout(function () {
+            // setTimeout(function () {
               navigate("/home");
-            }, 2000);
+            // }, 3000);
           });
       } catch (error) {
-        console.log(error.message);
+        toast.error(error.message);
       }
     },
   });

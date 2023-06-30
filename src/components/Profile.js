@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "./Navbar/Navbar";
+import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 const Profile = () => {
   const [user, setUser] = useState();
   let userGet = JSON?.parse(localStorage.getItem("Token")) || null;
@@ -32,27 +33,34 @@ const Profile = () => {
           <center>
             <img alt="img" src="/images/cta-logo-one.png" />
           </center>
-          <center>
-            {" "}
-            <div>
-              <h5 className="pro-file">
-                {" "}
-                <span className="color">Name</span>:{user?.name}
-              </h5>
-              <h5 className="pro-file">
-                {" "}
-                <span className="color">Email</span>:{user?.email}
-              </h5>
-              <h5 className="pro-file">
-                {" "}
-                <span className="color">PhoneNumber</span>:{user?.phone_no}
-              </h5>
-              <h5 className="pro-file">
-                {" "}
-                <span className="color">Plan</span>:{user?.plan}
-              </h5>
-            </div>
-          </center>
+          <Card >
+            <CardContent>
+              <Grid container spacing={2}>
+                <Grid item xs={3}>
+                  <img src="https://pbs.twimg.com/media/DeEM4UZWsAE_SuK.png" alt="profile" style={{height:250,width:250}} />
+                </Grid>
+                <Grid item xs={5}>
+              <Box sx={{display:"flex"}}>
+              <Typography  sx={{fontSize:40, fontWeight:"bold",color:"#ff0066"}}>Name : </Typography>
+              <Typography sx={{marginLeft:2,fontSize:40}}>{user?.name}</Typography>
+              </Box>
+              <Box sx={{display:"flex"}}>
+              <Typography sx={{fontSize:40, fontWeight:"bold",color:"#ff0066"}}>Email : </Typography>
+              <Typography sx={{marginLeft:2,fontSize:40}}>{user?.email}</Typography>
+              </Box>
+              <Box sx={{display:"flex"}}>
+              <Typography sx={{fontSize:40, fontWeight:"bold",color:"#ff0066"}}>Mobile  : </Typography>
+              <Typography sx={{marginLeft:2,fontSize:40,}}>{user?.phone_no}</Typography>
+              </Box>
+              <Box sx={{display:"flex"}}>
+              <Typography sx={{fontSize:40, fontWeight:"bold",color:"#ff0066"}}>Plan : </Typography>
+              <Typography sx={{marginLeft:2,fontSize:40}}>{user?.plan}</Typography>
+              </Box>
+              </Grid>
+              </Grid>
+            </CardContent>
+          </Card>
+          
         </div>
         <img
           src="/images/slider-badag.jpg"
